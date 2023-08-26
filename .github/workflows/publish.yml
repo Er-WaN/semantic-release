@@ -10,17 +10,7 @@ on:
       - "19.0.5-ETH"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: npm test
-
-  publish-gpr:
+  publish:
     needs: build
     runs-on: ubuntu-latest
     permissions:
